@@ -399,6 +399,9 @@ hr{
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+.reviews-container .film{
+	margin-bottom: 50px;
+}
 
 
 

@@ -123,12 +123,13 @@ function scrollSmoothTo(elementId) {
         console.log(document.querySelector('.reviews-container').children[0].children[0].children[0])
 
         document.querySelector('.reviews-container').children[0].children[0].children[0].src = latestReviewPoster
-        document.querySelector('.reviews-container').children[0].children[0].href = link
+        document.querySelector('.reviews-container').children[0].children[0].href = link.split('https://polar-eyrie-90298.herokuapp.com/')[1]
         document.querySelector('.reviews-container').children[0].children[1].children[0].children[0].innerText = latestReviewMovie
-        document.querySelector('.reviews-container').children[0].children[1].children[0].href = link
+        document.querySelector('.reviews-container').children[0].children[1].children[0].href = link.split('https://polar-eyrie-90298.herokuapp.com/')[1]
         document.querySelector('.reviews-container').children[0].children[1].children[2].children[0].innerText = latestReviewAuthor
+        document.querySelector('.reviews-container').children[0].children[1].children[2].children[0].href = link.split('https://polar-eyrie-90298.herokuapp.com/')[1].split('/film')[0]
         document.querySelector('.reviews-container').children[0].children[1].children[3].innerText = latestReview
-        document.querySelector('.reviews-container').children[0].children[1].children[3].href = link
+        document.querySelector('.reviews-container').children[0].children[1].children[3].href = link.split('https://polar-eyrie-90298.herokuapp.com/')[1]
     
     }).catch(function (err) {
         // There was an error
@@ -168,12 +169,13 @@ fetch('https://polar-eyrie-90298.herokuapp.com/https://letterboxd.com/typical/fi
         let latestReviewPoster = doc.querySelector('.film-poster > img').src
  
         document.querySelector('.reviews-container').children[1].children[0].children[0].src = latestReviewPoster
-        document.querySelector('.reviews-container').children[1].children[0].href = link
+        document.querySelector('.reviews-container').children[1].children[0].href = link.split('https://polar-eyrie-90298.herokuapp.com/')[1]
         document.querySelector('.reviews-container').children[1].children[1].children[0].children[0].innerText = latestReviewMovie
-        document.querySelector('.reviews-container').children[1].children[1].children[0].href = link
+        document.querySelector('.reviews-container').children[1].children[1].children[0].href = link.split('https://polar-eyrie-90298.herokuapp.com/')[1]
         document.querySelector('.reviews-container').children[1].children[1].children[2].children[0].innerText = latestReviewAuthor
+        document.querySelector('.reviews-container').children[1].children[1].children[2].children[0].href = link.split('https://polar-eyrie-90298.herokuapp.com/')[1].split('/film')[0]
         document.querySelector('.reviews-container').children[1].children[1].children[3].innerText = latestReview
-        document.querySelector('.reviews-container').children[1].children[1].children[3].href = link
+        document.querySelector('.reviews-container').children[1].children[1].children[3].href = link.split('https://polar-eyrie-90298.herokuapp.com/')[1]
     
     }).catch(function (err) {
         // There was an error
