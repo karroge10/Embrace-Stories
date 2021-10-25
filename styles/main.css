@@ -13,15 +13,16 @@ html {
     background-color: #222222;
 	color: #fff4f4;
 	font-family: 'Epilogue', sans-serif;
+
+}
+body{
+	height: auto;
+	overflow-x: hidden;
 	background-image:  linear-gradient(135deg, rgb(14, 14, 14) 25%, transparent 25%), linear-gradient(225deg, rgb(14, 14, 14) 25%, transparent 25%), linear-gradient(45deg, rgb(14, 14, 14) 25%, transparent 25%), linear-gradient(315deg, rgb(14, 14, 14) 25%, rgb(2, 2, 2) 25%);
 	background-position:  5px 0, 5px 0, 0 0, 0 0;
 	background-size: 5px 5px;
 	background-repeat: repeat;
 	background-attachment: fixed;
-}
-body{
-	height: auto;
-	overflow-x: hidden;
 }
 nav{
 	width: 100%;
@@ -623,9 +624,6 @@ hr{
 	.hero-logo{
 		width: 100%;
 	}
-	.hero-title{
-		font-size: 24px
-	}
 	.description{
 		font-size: 18px;
 	}
@@ -747,7 +745,6 @@ hr{
 		position: absolute;
 		left: 50%;
 		top: 100%;
-		padding: 40px 0;
 		transform-origin: 0% 0%;
 		-webkit-transform: rotate(0deg);
 		-moz-transform: rotate(0deg);
@@ -787,9 +784,6 @@ hr{
 	.section-hr, .screenplays .section-hr{
 		margin-bottom: 75px;
 	}
-	.reviews-container{
-
-	}
 	.review-text{
     	-webkit-line-clamp: 3;
 	}
@@ -806,6 +800,16 @@ hr{
 }
 
 @media screen and (max-width: 500px) {	  
+	.hero-container{
+		width: 90%;
+	}
+	.image-container{
+		width: 50%;
+	}
+	.text-container .description{
+		font-size: 16px;
+		margin: 1em 0;
+	}
 	.poster-container{
 		max-width: 80%;
 	}
@@ -830,14 +834,11 @@ hr{
 	.film-info{
 		width: 100%;
 	}
-	.hero-menu{
-		display:flex;
-		flex-direction: column;
-		align-items: center;
-	}
+
 	.hero-link{
-		padding: 7px 0;
+		padding: 0 5px;
 	}
+
 	.film-buttons{
 		flex-direction: column;
 		width: 100%;

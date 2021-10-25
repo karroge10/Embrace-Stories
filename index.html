@@ -22,7 +22,7 @@
     <nav>
         <div class="company">
             <img src="styles/images/logo-bw.svg" alt="Embrace Stories Logo" class="nav-logo">
-            <p class="nav-title">Embrace Stories</p>
+            <a class="nav-title" onclick="scrollSmoothTo('hero')">Embrace Stories</ф>
         </div>
         <div class="menu">
             <div class="menu-item" id="nav-projects" onmouseover="openSubMenu(this)" onmouseleave="closeSubMenu(this)">
@@ -52,7 +52,7 @@
             <span></span>
         </div>
     </nav>
-    <section class="hero" onclick="hamburgerClose()">
+    <section class="hero" onclick="hamburgerClose()" id="hero">
         <div class="hero-container">
             <div class="image-container animate__animated animate__fadeIn">
                 <img src="styles/images/logo-bw.svg" alt="Embrace Stories Logo" class="hero-logo">
@@ -65,9 +65,10 @@
             </div>
         </div>
         <div class="hero-menu rotate animate__animated animate__fadeIn">
-            <a href="https://twitter.com/embracestories" aria-label="Twitter" rel="noreferrer" target="_blank" class="hero-link">TWITTER</a>
+            <a href="https://twitter.com/embracestories" aria-label="Twitter" rel="noreferrer" target="_blank" class="hero-link">TWITTER </a>
             <a href="https://www.youtube.com/supershah201" aria-label="Youtube" rel="noreferrer" target="_blank" class="hero-link">YOUTUBE</a>
             <a href="https://letterboxd.com/supershah201" aria-label="Letterboxd" rel="noreferrer" target="_blank" class="hero-link">LETTERBOXD</a>
+            
         </div>
     </section>
     <section class="projects" id='projects' onclick="hamburgerClose()">
