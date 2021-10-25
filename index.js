@@ -94,7 +94,7 @@ function scrollSmoothTo(elementId) {
 
 
 
-  fetch('https://letterboxd.com/supershah201/films/reviews/by/added/').then(function (response) {
+  fetch('https://polar-eyrie-90298.herokuapp.com/https://letterboxd.com/supershah201/films/reviews/by/added/').then(function (response) {
 	// The API call was successful!
 	return response.text();
 }).then(function (html) {
@@ -103,7 +103,7 @@ function scrollSmoothTo(elementId) {
 	var parser = new DOMParser();
 	var doc = parser.parseFromString(html, 'text/html');
 
-	let link = 'https://letterboxd.com/super' + doc.querySelector('.headline-2 > a').href.split('super')[1];
+	let link = 'https://polar-eyrie-90298.herokuapp.com/https://letterboxd.com/super' + doc.querySelector('.headline-2 > a').href.split('super')[1];
 	console.log(link);
 
     fetch(link).then(function (response) {
@@ -141,7 +141,7 @@ function scrollSmoothTo(elementId) {
 });
 
 
-fetch('https://letterboxd.com/typical/films/reviews/by/added/').then(function (response) {
+fetch('https://polar-eyrie-90298.herokuapp.com/https://letterboxd.com/typical/films/reviews/by/added/').then(function (response) {
 	// The API call was successful!
 	return response.text();
 }).then(function (html) {
@@ -150,7 +150,7 @@ fetch('https://letterboxd.com/typical/films/reviews/by/added/').then(function (r
 	var parser = new DOMParser();
 	var doc = parser.parseFromString(html, 'text/html');
 
-	let link = 'https://letterboxd.com/typical' + doc.querySelector('.headline-2 > a').href.split('typical')[1];
+	let link = 'https://polar-eyrie-90298.herokuapp.com/https://letterboxd.com/typical' + doc.querySelector('.headline-2 > a').href.split('typical')[1];
 	console.log(link);
 
     fetch(link).then(function (response) {
