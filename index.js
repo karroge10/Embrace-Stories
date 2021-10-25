@@ -50,7 +50,7 @@ openSubMenu = (link) => {
         projectsMenu.classList.remove('hide-sub')
         aboutMenu.classList.add("hide-sub")
         aboutMenu.classList.remove('active-sub')
-        if (window.innerWidth < 1010){
+        if (window.innerWidth < 1080){
             link.classList.add('menu-item-gap')
             aboutMain.classList.remove('menu-item-gap')
         }
@@ -59,14 +59,14 @@ openSubMenu = (link) => {
         aboutMenu.classList.remove('hide-sub')
         projectsMenu.classList.add('hide-sub')
         projectsMenu.classList.remove('active-sub')
-        if (window.innerWidth < 1010){
+        if (window.innerWidth < 1080){
             link.classList.add('menu-item-gap')
             projectsMain.classList.remove('menu-item-gap')
         }
     }
 }
 closeSubMenu = (link) => {
-    if (window.innerWidth >= 1010){
+    if (window.innerWidth >= 1080){
         if (link.id === 'nav-projects'){
             projectsMenu.classList.add('hide-sub')
             projectsMenu.classList.remove('active-sub')
@@ -90,6 +90,8 @@ function scrollSmoothTo(elementId) {
     // element.scrollIntoView({ block: 'start',  behavior: 'smooth' });
     const y = element.getBoundingClientRect().top + window.pageYOffset - yOffset;
     window.scrollTo({top: y, behavior: 'smooth'});
+    hamburgerClose()
+    closeSubMenu()
   }
 
 

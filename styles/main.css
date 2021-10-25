@@ -172,6 +172,9 @@ hr{
 	letter-spacing: 0.5px;
 	line-height: 2rem;
 }
+.screenplay p{
+	font-weight: 300;
+}
 .learn-more-button{
 	width: fit-content;
     padding: 18px;
@@ -253,6 +256,9 @@ hr{
 .film-info:nth-child(odd){
 	margin-right: 100px;
 }
+.film-info p{
+	font-weight: 300;
+}
 .crew-link{
 	cursor: pointer;
 	color: #fff4f4;
@@ -295,8 +301,7 @@ hr{
 
 .film-button{
 	width: fit-content;
-	height: 55px;
-    padding: 5px 15px;
+    padding: 20px;
     transition: color 100ms ease-in-out;
     border: 1px solid #fff4f4;
 	color: #fff4f4;
@@ -310,6 +315,9 @@ hr{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+}
+.film-button:nth-child(even){
+	margin-right: 0;
 }
 .film-button:hover{
 	color: #ad2224;
@@ -334,9 +342,13 @@ hr{
     flex-direction: column;
     align-items: center;
 }
+.screenplays .section-hr{
+	margin-bottom: 50px;
+}
 .screenplays-container{
 	display: flex;
 	flex-wrap: wrap;
+	margin-bottom: 50px;
 }
 .screenplays-container:nth-last-child(){
 	margin-right: auto
@@ -372,6 +384,7 @@ hr{
     display: flex;
     flex-direction: column;
     align-items: center;
+	margin-bottom: 100px;
 }
 .review{
 	width: 100%;
@@ -393,16 +406,38 @@ hr{
 .review-info a:hover{
 	color: #ad2224;
 }
+
+.review-info .title{
+	margin-bottom: 0.5em;
+}
+.review-author{
+	margin: 1em 0;
+	font-weight: 300;
+}
+
 .review-text{
 	display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+	margin: 1em 0;
+	font-style: italic;
 }
-.reviews-container .film{
+.reviews-container .film:nth-child(odd){
 	margin-bottom: 50px;
 }
+.reviews-container .film:nth-child(even){
+	margin-bottom: 0px;
+}
 
+
+.podcasts{
+	width: 80%;
+	height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 
@@ -536,7 +571,7 @@ hr{
 
 }
 
-@media screen and (max-width: 1370px) {
+@media screen and (max-width: 1375px) {
 	.hero-container{
 		width: 80%;
 	}
@@ -560,9 +595,15 @@ hr{
 	.nav-title{
 		font-size: 18px;
 	}
+	.review-info{
+		width: 90%;
+	}
 }
 
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 1080px) {
+	.screenplays .section-hr {
+		margin-bottom: 100px;
+	}
 	.hero-container{
 		width: 80%;
 		flex-direction: column;
@@ -586,7 +627,7 @@ hr{
 		font-size: 24px
 	}
 	.description{
-		font-size: 17px;
+		font-size: 18px;
 	}
 	.learn-more-button{
 		font-size: 13px;
@@ -603,11 +644,28 @@ hr{
 	.film-info:nth-child(odd){
 		margin-right: 50px;
 	}
+	.title{
+		font-size: 30px;
+	}
+	.film-info .description{
+		font-size: 17px;
+	}
+	.poster{
+		height: auto;
+	}
+	.film-buttons{
+		margin-top: 20px;
+	}
+	.film-button{
+		padding: 15px;
+		font-size: 14px;
+	}
 	.screenplay .title{
 		height: auto;
 	}
 	.screenplays-container{
 		flex-direction: row;
+		margin-bottom: 0;
 	}
 	.screenplays{
 		width: 80%;
@@ -676,8 +734,15 @@ hr{
 	.hide-sub{
 		transition: all 0s;
 	}
+
+	.review-info{
+		width: 100%;
+	}
+	.reviews{
+		margin-bottom: 54px;
+	}
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
 	.rotate {
 		position: absolute;
 		left: 50%;
@@ -685,9 +750,111 @@ hr{
 		padding: 40px 0;
 		transform-origin: 0% 0%;
 		-webkit-transform: rotate(0deg);
-		  -moz-transform: rotate(0deg);
-		  -o-transform: rotate(0deg);
-		  -ms-transform: rotate(0deg);
-		  transform: rotate(0deg) translateX(-50%) translateY(-100%);
-	  }
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg) translateX(-50%) translateY(-100%);
+	}
+	.films .film{
+		flex-direction: column;
+		align-items: center;
+	}
+	.films .film:nth-last-child(1){
+		margin-bottom: 40px;
+	}
+	.poster-container{
+		max-width: 60%;
+	}
+	.film-info .description{
+		font-size: 18px;
+	}
+	.title{
+		font-size: 34px;
+	}
+	.film-info{
+		width: 100%;
+		margin: 50px 0 25px 0 !important;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.description{
+		align-self: flex-start;
+	}
+	.films .film:nth-child(even){
+		flex-direction: column-reverse;
+	}
+	.section-hr, .screenplays .section-hr{
+		margin-bottom: 75px;
+	}
+	.reviews-container{
+
+	}
+	.review-text{
+    	-webkit-line-clamp: 3;
+	}
+	  
+}
+
+@media screen and (max-width: 600px) {  
+	.poster-container{
+		max-width: 70%;
+	}
+	.review-text{
+    	-webkit-line-clamp: 4;
+	}
+}
+
+@media screen and (max-width: 500px) {	  
+	.poster-container{
+		max-width: 80%;
+	}
+	.reviews-container .film{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.review-text{
+    	-webkit-line-clamp: 10;
+	}
+	.review-info{
+		margin-left: 0;
+		margin-top: 50px;
+	}
+}
+
+@media screen and (max-width: 400px) {	  
+	.poster-container{
+		max-width: 95%;
+	}
+	.film-info{
+		width: 100%;
+	}
+	.hero-menu{
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.hero-link{
+		padding: 7px 0;
+	}
+	.film-buttons{
+		flex-direction: column;
+		width: 100%;
+		margin-top: 15px;
+	}
+	.film-button{
+		width: 100%;
+		justify-content: center;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	.film-button:nth-child(even){
+		margin-bottom: 0;
+	}
+}
+@media screen and (max-width: 300px) {
+	.poster-container{
+		max-width: 100%;
+	}
 }
