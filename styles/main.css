@@ -51,6 +51,8 @@ nav{
 	font-size: 20px;
 	margin: 0;
 	letter-spacing: 0.5px;
+	text-decoration: none;
+	color: #fff4f4;
 }
 .nav-logo{
 	width: 50px;
@@ -220,7 +222,7 @@ hr{
 	width: 120px;
 	margin-bottom: 100px;
 }
-.projects{
+.main-section{
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -354,11 +356,11 @@ hr{
 .screenplays-container:nth-last-child(){
 	margin-right: auto
 }
-.screenplay{ 
+.screenplay, .team-member{ 
 	margin: 5% 4%; 
 	width: 42%;
 }
-.screenplay a{
+.screenplay a, .team-member a{
 	text-decoration: none;
 }
 .screenplay .title{
@@ -418,7 +420,7 @@ hr{
 
 .review-text{
 	display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 	margin: 1em 0;
@@ -434,12 +436,35 @@ hr{
 
 .podcasts{
 	width: 80%;
-	height: 100vh;
+	height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
+
+.team-member{
+	display: flex;
+	flex-direction: row;
+}
+
+.team-member p{
+	font-weight: bold;
+}
+.team-member .image-container{
+	width: fit-content;
+    max-width: 350px;
+	border: 1px solid #ad2224;
+	border-radius: 50%;
+}
+.member-image{
+    height: 100%;
+    width: 100%;
+	object-fit: cover;
+	border: 1px solid #ad2224;
+	border-radius: 50%;
+}
 
 
 /*-----------------------------------Hamburger button style-----------------------------------*/
@@ -795,7 +820,7 @@ hr{
 		max-width: 70%;
 	}
 	.review-text{
-    	-webkit-line-clamp: 4;
+    	-webkit-line-clamp: 5;
 	}
 }
 
