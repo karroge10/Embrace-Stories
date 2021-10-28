@@ -45,7 +45,7 @@ nav{
 	align-items: center;
 	padding: 25px 50px;
 	transition: all 200ms ease-in-out;
-	cursor: pointer;
+
 }
 .nav-title{
 	font-size: 20px;
@@ -53,15 +53,18 @@ nav{
 	letter-spacing: 0.5px;
 	text-decoration: none;
 	color: #fff4f4;
+	transition: color 200ms ease-in-out;
+	cursor: pointer;
 }
 .nav-logo{
 	width: 50px;
 	height: 50px;
 	margin-right: 10px;
 	padding: 2px;
+	cursor: pointer;
 }
 
-.company:hover{
+.nav-title:hover{
 	color: #ad2224;
 }
 .menu{
@@ -95,7 +98,7 @@ nav{
 }
 .sub-menu{
     margin: 0;
-	padding: 23px 0;
+	padding: 20px 0 5px 0;
 	list-style: none;
     display: flex;
     flex-flow: column;
@@ -207,6 +210,7 @@ hr{
 	transition: all 200ms ease-in-out;
 	font-size: 14px;
 	letter-spacing: 5px;
+	white-space: nowrap;
 }
 .hero-link:hover{
 	color: #ad2224;
@@ -298,8 +302,6 @@ hr{
 	display: flex;
 	flex-direction: row;
 	margin-top: 30px;
-	/* position: absolute; 
-	bottom: 0; */
 }
 
 .film-button{
@@ -335,9 +337,12 @@ hr{
 	margin-left: 5px;
 }
 .fa-circle{
-	margin-right: -5px;
+	margin-right: -4px;
 }
 .fa-twitter{
+	margin-left: 5px;
+}
+.fa-envelope{
 	margin-left: 5px;
 }
 
@@ -380,7 +385,7 @@ hr{
 }
 
 .menu-item-gap{
-	margin-bottom: 150px !important;
+	margin-bottom: 130px !important;
 }
 
 
@@ -481,13 +486,11 @@ hr{
     height: 200px;
     width: 200px;
 	object-fit: cover;
-	border: 3px solid #ad2224;
 	border-radius: 50%;
 }
 .member-description{
 	display: flex;
 	flex-direction: column;
-	/* align-items: center; */
 }
 .member-description .film-hr{
 	margin-right: auto;
@@ -505,8 +508,10 @@ hr{
 }
 
 /* ------------------- Email Section ----------------- */
+
 .email-section {
 	width: 100%;
+	margin-bottom: 100px;
 }
 
 .email-container {
@@ -514,7 +519,7 @@ hr{
 	flex-direction: column;
 	align-items: center;
 	position: relative;
-	max-width: 50%;
+	width: 40%;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -528,52 +533,153 @@ hr{
 	width: 50%;
 }
 .email-text {
-	width: 70%;
+	width: 85%;
 	resize: none;
-	border-style: solid;
-	border-width: 1px;
-	border-radius: 3px;
 	font-size: 14px;
 	letter-spacing: 0.7px;
-	border-color: #454545;
-	background-color: #151515;
-	padding: 11px 15px;
+	border: 1px solid #fff4f4b6;
+	background-color: transparent;
+	padding: 15px;
 	color: #fff;
+	font-family: 'Epilogue', sans-serif;
+	background-color: #151515a7;
 }
-.input {
-	margin-bottom: 20px;
-	padding: 11px 15px;
-	border-style: solid;
-	border-width: 1px;
-	border-radius: 3px;
-	font-size: 14px;
+input {
+	width: 90%;
+    padding: 15px;
 	letter-spacing: 0.7px;
-	border-color: #454545;
-	background-color: #151515;
-	color: #fff;
+    transition: color 100ms ease-in-out;
+    border: 1px solid #fff4f4b6;
+    color: #fff4f4;
+    background-color: transparent;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 14px;
+	margin-bottom: 20px;
+	background-color: #151515a7;
 }
 .email-text:focus {
-	border: 1px solid #e83e3e;
+	border: 1px solid #ad2224;
 	outline: none;
 }
-.input:focus {
-	border: 1px solid #e83e3e;
+input:focus {
+	border: 1px solid #ad2224;
 	outline: none;
+}
+input::placeholder, .email-text::placeholder{
+	color: #fff4f4b6;;
 }
 .email-button {
 	width: 90%;
 	cursor: pointer;
 	height: 41px;
-	border-radius: 3px;
-	border: 0;
-	background-color: #972424;
+	border: none;
+	background-color: #ad2224;
 	color: #fff;
-	font-size: 16px;
+	font-size: 14px;
 	letter-spacing: 1px;
 	transition: all 200ms ease-in-out;
+	font-family: 'Epilogue', sans-serif;
 }
 .email-button:hover {
-	background-color: #b93232;
+	background-color: #cc2e31;
+}
+
+.media-links-container{
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.social-button{
+	width: fit-content;
+    padding: 20px;
+    transition: color 100ms ease-in-out;
+    border: 1px solid #fff4f4;
+	color: #fff4f4;
+	background-color: transparent;
+	font-family: 'Epilogue', sans-serif;
+	font-size: 14px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+	letter-spacing: 2px;
+	margin-right: 15px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-decoration: none;
+}
+
+.social-button:hover{
+	color: #ad2224;
+	border: 1px solid #ad2224;
+}
+
+footer{
+	width: 100%;
+	background-color: #151515a7;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer-data{
+	width: 70%;
+	padding: 3rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+}
+.footer-container{
+	width: 33%;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 10px;
+}
+.footer-header{
+	font-size: 26px;
+	letter-spacing: 0.5px;
+	color: #ad2224;
+}
+.footer-description{
+	display: flex;
+	flex-direction: row;
+	line-height: 1.5rem;
+	margin: 10px 0;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	text-align: center;
+}
+.footer-button{
+	color: #fff4f4;
+	transition: all 150ms ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5px;
+	text-decoration: none;
+	border: 1px solid #fff4f4;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+.footer-button i{
+	margin: 0;
+	font-size: 20px;
+}
+.footer-button .fa-circle{
+	margin-top: 2px;
+	margin-left: -3px;
+	font-size: 75%
+}
+.footer-button .fa-circle:nth-child(1){
+	margin-left: 0px;
+}
+.footer-button:hover{
+	color: #ad2224;
+	border-color: #ad2224;
 }
 
 /*-----------------------------------Hamburger button style-----------------------------------*/
@@ -703,7 +809,9 @@ hr{
 		width: 60%;
 		margin-left: 25px;
 	}
-
+	.footer-data{
+		width: 80%;
+	}
 }
 
 @media screen and (max-width: 1375px) {
@@ -733,9 +841,33 @@ hr{
 	.review-info{
 		width: 90%;
 	}
+	.email-container{
+		width: 60%;
+	}
+	.footer-data{
+		width:	95%;
+	}
+	.footer-header{
+		font-size: 20px;
+	}
+	.footer-button{
+		height: 40px;
+    	width: 40px;
+	}
+	.footer-button i{
+		font-size: 16px;
+		margin: 0 0 0 1px;
+	}
+	.footer-button .fa-circle {
+		font-size: 55%;
+		margin-left: -2px;
+	}
+	.footer-button .fa-circle:nth-child(1) {
+		margin-left: 0px;
+	}
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1095px) {
 	.screenplays .section-hr {
 		margin-bottom: 100px;
 	}
@@ -796,7 +928,6 @@ hr{
 		height: auto;
 	}
 	.screenplays-container{
-		flex-direction: row;
 		margin-bottom: 0;
 	}
 	.screenplays, .members{
@@ -805,6 +936,16 @@ hr{
 	.screenplay{
 		width: 100%;
 		margin: 0 0 50px 0;
+	}
+	.team-member{
+		width: 100%;
+		margin: 0 0 70px 0;
+	}
+	.members .section-hr{
+		margin-bottom: 70px;
+	}
+	.member-description{
+		width: 70%;
 	}
 	/*Hambuger*/
 	nav {
@@ -845,7 +986,7 @@ hr{
 		text-align: center;
 		width: 50%;
 		position: relative;
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 	}
 	.company {
 		height: 100%;
@@ -873,6 +1014,24 @@ hr{
 	.reviews{
 		margin-bottom: 54px;
 	}
+	.email-container{
+		width: 70%;
+	}
+	.footer-data{
+		width: 100%;
+		flex-direction: column;
+	}
+	.footer-container{
+		margin: 10px 0;
+		height: auto;
+		width: 100%;
+	}
+
+	.fa-circle{
+		font-size: 70%;
+		margin-right: -3px;
+	}
+
 }
 @media screen and (max-width: 750px) {
 	.rotate {
@@ -921,7 +1080,9 @@ hr{
 	.review-text{
     	-webkit-line-clamp: 3;
 	}
-	  
+	.email-container{
+		width: 80%;
+	}
 }
 
 @media screen and (max-width: 600px) {  
@@ -930,6 +1091,26 @@ hr{
 	}
 	.review-text{
     	-webkit-line-clamp: 5;
+	}
+	.subscribe-form{
+		flex-direction: column-reverse;
+	}
+	.email-container{
+		width: 75%;
+	}
+	.name-and-email{
+		width: 100%;
+	}
+	input, .email-button, .email-text{
+		width: 100%;
+	}
+	.email-text{
+		margin-bottom: 20px;
+		height: 100px;
+	}
+	.social-button{
+		padding: 15px;
+    	font-size: 14px;
 	}
 }
 
@@ -958,6 +1139,23 @@ hr{
 	.review-info{
 		margin-left: 0;
 		margin-top: 50px;
+	}
+	.social-button{
+		font-size: 0;
+		border-radius: 50%;
+		height: 50px;
+		width: 50px;
+		padding: 0;
+		align-items: center;
+		justify-content: center;
+		margin-right: 10px;
+	}
+	.social-button:nth-last-child(1){
+		margin-right: 0;
+	}
+	.social-button i{
+		font-size: 18px;
+		margin-left: -10px;
 	}
 }
 

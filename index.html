@@ -21,7 +21,7 @@
 <body>
     <nav>
         <div class="company">
-            <img src="styles/images/logo-bw.svg" alt="Embrace Stories Logo" class="nav-logo">
+            <img src="styles/images/logo-bw.svg" alt="Embrace Stories Logo" class="nav-logo" onclick="scrollSmoothTo('hero')">
             <a class="nav-title" onclick="scrollSmoothTo('hero')">Embrace Stories</ф>
         </div>
         <div class="menu">
@@ -67,7 +67,7 @@
         <div class="hero-menu rotate animate__animated animate__fadeIn">
             <a href="https://twitter.com/embracestories" aria-label="Twitter" rel="noreferrer" target="_blank" class="hero-link">TWITTER </a>
             <a href="https://www.youtube.com/supershah201" aria-label="Youtube" rel="noreferrer" target="_blank" class="hero-link">YOUTUBE</a>
-            <a href="mailto:karroge10@gmail.com" aria-label="E-Mail" rel="noreferrer" target="_blank" class="hero-link">EMAIL</a>
+            <a href="mailto:embrace@gmail.com" aria-label="E-Mail" rel="noreferrer" target="_blank" class="hero-link">E-MAIL</a>
             
         </div>
     </section>
@@ -354,30 +354,50 @@
                 </div>
             </div>
         </div>
-        <div class=" email-section">
+        <div class=" email-section" id="contacts">
             <div class="email-container">
                 <h1 class="section-header">Contact Us</h1>
                 <hr class="section-hr">
                 <form class="subscribe-form" id="userform" action="https://formspree.io/f/xknpgpod" target="_self" method="POST">                        
                     <div class="name-and-email">
-                        <input type="text" name="username" id="username"  class="input" placeholder="Name">
+                        <input type="text" name="username" id="username" placeholder="Name">
                         <label for="username"></label>
-                        <input type="email" name="useremail" id="useremail" class="input" placeholder="Email address" required="">
+                        <input type="email" name="useremail" id="useremail" placeholder="Email address" required="">
                         <label for="useremail"></label>
                         <button type="submit" value="Send" class="email-button">SEND</button>                            
                     </div>
-                    <textarea type="text" name="usertext" form="userform" id="usertext"  class="email-text" placeholder="Say hi!"></textarea>
+                    <textarea type="text" name="usertext" form="userform" id="usertext"  class="email-text" placeholder="Your message"></textarea>
                     <label for="usertext"></label>
                 </form>
             </div>
             <div class="media-links-container">
-                <a class="film-button" href="https://twitter.com/embracestories" aria-label="Embrace Stories Twitter" rel="noreferrer" target="_blank">TWITTER<i class="fab fa-twitter"></i></a>
-                <a class="film-button" href="https://twitter.com/embracestories" aria-label="Embrace Stories Twitter" rel="noreferrer" target="_blank">YOUTUBE<i class="fab fa-youtube"></i></a>
-                <a class="film-button" href="https://twitter.com/embracestories" aria-label="Embrace Stories Twitter" rel="noreferrer" target="_blank">E-MAIL<i class="far fa-envelope"></i></a>
-
+                <a class="social-button" href="https://twitter.com/embracestories" aria-label="Embrace Stories Twitter" rel="noreferrer" target="_blank">TWITTER<i class="fab fa-twitter"></i></a>
+                <a class="social-button" href="https://www.youtube.com/user/SuperShah201" aria-label="Embrace Stories Youtube" rel="noreferrer" target="_blank">YOUTUBE<i class="fab fa-youtube"></i></a>
+                <a class="social-button" href="mailto:embrace@gmail.com" aria-label="Embrace Stories E-Mail" rel="noreferrer" target="_blank">E-MAIL<i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </section>
+    <footer>
+        <div class="footer-data">
+            <div class="footer-container">
+                <p class="footer-header">Embrace Stories</p>
+                <p class="footer-description">Home for independent storytellers.</p>
+            </div>
+            <div class="footer-container">
+                <p class="footer-header">Socials</p>
+                <div class="footer-description">
+                    <a class="footer-button" href="https://twitter.com/embracestories" aria-label="Embrace Stories Twitter" rel="noreferrer" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="footer-button" href="https://www.youtube.com/user/SuperShah201" aria-label="Embrace Stories Youtube" rel="noreferrer" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="footer-button" href="https://letterboxd.com/supershah201" aria-label="Hunter R. Lewis Letterboxd" rel="noreferrer" target="_blank"><i class="fas fa-circle left-circle fa-xs"></i><i class="fas fa-circle fa-xs"></i><i class="fas fa-circle fa-xs"></i></a></a>
+                    <a class="footer-button" href="mailto:embrace@gmail.com" aria-label="Embrace Stories E-Mail" rel="noreferrer" target="_blank"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-container">
+                <p class="footer-header">About Us</p>
+                <p class="footer-description">We are a film-collective full of young filmmakers making movies.</p>
+            </div>
+        </div>
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>
