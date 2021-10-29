@@ -190,3 +190,6 @@ fetch('https://polar-eyrie-90298.herokuapp.com/https://letterboxd.com/typical/fi
 });
 
 
+if (window.innerWidth <= 750 && document.querySelector('.hero-menu').classList.contains('rotate')){
+    document.querySelector('.hero-menu').classList.remove('rotate')
+}

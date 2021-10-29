@@ -10,21 +10,26 @@ html {
 	min-width: 280px;
 	margin: 0;
 	padding: 0;
-    background-color: #222222;
 	color: #fff4f4;
 	font-family: 'Epilogue', sans-serif;
-
+}
+html{
+	background-image:  linear-gradient(135deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(225deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(45deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(315deg, rgb(17, 17, 17) 25%, rgb(2, 2, 2) 25%);
+	background-position:  5px 0, 5px 0, 0 0, 0 0;
+	background-size: 5px 5px;
+	background-repeat: repeat;
+	background-color: rgb(17, 17, 17);
 }
 body{
-	height: auto;
 	overflow-x: hidden;
-	background-image:  linear-gradient(135deg, rgb(14, 14, 14) 25%, transparent 25%), linear-gradient(225deg, rgb(14, 14, 14) 25%, transparent 25%), linear-gradient(45deg, rgb(14, 14, 14) 25%, transparent 25%), linear-gradient(315deg, rgb(14, 14, 14) 25%, rgb(2, 2, 2) 25%);
+	background-image:  linear-gradient(135deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(225deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(45deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(315deg, rgb(17, 17, 17) 25%, rgb(2, 2, 2) 25%);
 	background-position:  5px 0, 5px 0, 0 0, 0 0;
 	background-size: 5px 5px;
 	background-repeat: repeat;
 	background-attachment: fixed;
 }
 nav{
+	top: 0;
 	width: 100%;
     position: fixed;
     z-index: 9999;
@@ -33,7 +38,7 @@ nav{
 	align-items: center;
 	justify-content: space-between;
 	opacity: 0.9;
-	background-image:  linear-gradient(135deg, #0E0E0E 25%, transparent 25%), linear-gradient(225deg, #0E0E0E 25%, transparent 25%), linear-gradient(45deg, #0E0E0E 25%, transparent 25%), linear-gradient(315deg, #0E0E0E 25%, #020202 25%);
+	background-image:  linear-gradient(135deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(225deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(45deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(315deg, rgb(17, 17, 17) 25%, rgb(2, 2, 2) 25%);
 	background-position:  5px 0, 5px 0, 0 0, 0 0;
 	background-size: 5px 5px;
 	background-repeat: repeat;
@@ -140,7 +145,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-	position: relative;
+	flex-direction: column;
 }
 .hero-container{
 	width: 55%;
@@ -947,10 +952,13 @@ footer{
 	.member-description{
 		width: 70%;
 	}
+	.nav-title{
+		margin-right: 10px;
+	}
 	/*Hambuger*/
 	nav {
 		z-index: 1000;
-		opacity: 0.95;
+
 	}
 	.menu {
 		width: 100%;
@@ -964,7 +972,7 @@ footer{
 		top: -300px;
 		transform: translateY(0);
 		transition: 300ms ease-in-out;
-		background-image:  linear-gradient(135deg, #0E0E0E 25%, transparent 25%), linear-gradient(225deg, #0E0E0E 25%, transparent 25%), linear-gradient(45deg, #0E0E0E 25%, transparent 25%), linear-gradient(315deg, #0E0E0E 25%, #020202 25%);
+		background-image:  linear-gradient(135deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(225deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(45deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(315deg, rgb(17, 17, 17) 25%, rgb(2, 2, 2) 25%);
 		background-position:  5px 0, 5px 0, 0 0, 0 0;
 		background-size: 5px 5px;
 		background-repeat: repeat;
@@ -995,7 +1003,7 @@ footer{
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-image:  linear-gradient(135deg, #0E0E0E 25%, transparent 25%), linear-gradient(225deg, #0E0E0E 25%, transparent 25%), linear-gradient(45deg, #0E0E0E 25%, transparent 25%), linear-gradient(315deg, #0E0E0E 25%, #020202 25%);
+		background-image:  linear-gradient(135deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(225deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(45deg, rgb(17, 17, 17) 25%, transparent 25%), linear-gradient(315deg, rgb(17, 17, 17) 25%, rgb(2, 2, 2) 25%);
 		background-position:  5px 0, 5px 0, 0 0, 0 0;
 		background-size: 5px 5px;
 		background-repeat: repeat;
@@ -1035,15 +1043,17 @@ footer{
 }
 @media screen and (max-width: 750px) {
 	.rotate {
-		position: absolute;
-		left: 50%;
-		top: 100%;
 		transform-origin: 0% 0%;
 		-webkit-transform: rotate(0deg);
 		-moz-transform: rotate(0deg);
 		-o-transform: rotate(0deg);
 		-ms-transform: rotate(0deg);
 		transform: rotate(0deg) translateX(-50%) translateY(-100%);
+	}
+	.hero-menu{
+		position: initial;
+		padding: 0;
+		margin-top: 50px;
 	}
 	.films .film{
 		flex-direction: column;
@@ -1068,6 +1078,9 @@ footer{
 		flex-direction: column;
 		align-items: center;
 	}
+	.text-container .description{
+		align-self: center;
+	}
 	.description{
 		align-self: flex-start;
 	}
@@ -1082,6 +1095,9 @@ footer{
 	}
 	.email-container{
 		width: 80%;
+	}
+	.member-description{
+		width: 90%;
 	}
 }
 
@@ -1111,6 +1127,10 @@ footer{
 	.social-button{
 		padding: 15px;
     	font-size: 14px;
+	}
+	.member-description .description{
+		align-self: center;
+		text-align: center;
 	}
 }
 
@@ -1157,6 +1177,21 @@ footer{
 		font-size: 18px;
 		margin-left: -10px;
 	}
+	.menu-item{
+		width: 70%;
+	}
+	.menu-link{
+		font-size: 16px;
+	}
+	.sub-link{
+		font-size: 16px;
+	}
+	.menu-item-gap{
+		margin-bottom: 140px !important;
+	}
+	.member-description{
+		width: 90%;
+	}
 }
 
 @media screen and (max-width: 400px) {	  
@@ -1166,9 +1201,8 @@ footer{
 	.film-info{
 		width: 100%;
 	}
-
 	.hero-link{
-		padding: 0 5px;
+		padding: 0 10px;
 	}
 
 	.film-buttons{
@@ -1186,8 +1220,82 @@ footer{
 		margin-bottom: 0;
 	}
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 340px) {
 	.poster-container{
 		max-width: 100%;
+	}
+	.hero-menu{
+		flex-direction: column;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.hero-link{
+		padding: 10px 0;
+	}
+	.hero{
+		margin-top: 30px;
+	}
+}
+
+@media screen and (max-height: 670px) {
+	.hero{
+		margin-top: 30px;
+	}
+	.image-container{
+		width: 25%;
+	}
+	.hero-title {
+		font-size: 24px;
+	}
+	.description {
+		font-size: 16px;
+	}
+	.text-container{
+		margin-top: 10px;
+	}
+	.hero-link{
+		font-size: 11px;
+		padding: 0 7px;
+	}
+}
+
+@media screen and (max-height: 530px){
+	.hero{
+		margin-top: 35px;
+	}
+	.company{
+		padding: 10px 50px;
+	}
+	.image-container{
+		width: 20%;
+	}
+	.text-container{
+		margin-top: 5px;
+	}
+	.hero-title {
+		margin-bottom: 0.5em;
+	}
+	.description {
+		margin: 1em 0;
+	}
+	.rotate{
+		top: 60%
+	}
+	.hero-link{
+		font-size: 10px;
+		padding: 0 5px;
+	}
+	.learn-more-button{
+		font-size: 12px;
+		padding: 13px;
+	}
+	
+}
+@media screen and (max-height: 430px) and (max-width: 1750px){
+	.hero{
+		margin-top: 50px;
+	}
+	.image-container{
+		width: 10%;
 	}
 }
