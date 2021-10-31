@@ -106,7 +106,6 @@ function scrollSmoothTo(elementId) {
 	var doc = parser.parseFromString(html, 'text/html');
 
 	let link = 'https://polar-eyrie-90298.herokuapp.com/https://letterboxd.com/super' + doc.querySelector('.headline-2 > a').href.split('super')[1];
-	console.log(link);
 
     fetch(link).then(function (response) {
         // The API call was successful!
@@ -122,7 +121,6 @@ function scrollSmoothTo(elementId) {
         let latestReview = doc.querySelector('.body-text > div > div').innerText
         let latestReviewPoster = doc.querySelector('.film-poster > img').src
  
-        console.log(document.querySelector('.reviews-container').children[0].children[0].children[0])
 
         document.querySelector('.reviews-container').children[0].children[0].children[0].src = latestReviewPoster
         document.querySelector('.reviews-container').children[0].children[0].href = link.split('https://polar-eyrie-90298.herokuapp.com/')[1]
@@ -154,7 +152,6 @@ fetch('https://polar-eyrie-90298.herokuapp.com/https://letterboxd.com/typical/fi
 	var doc = parser.parseFromString(html, 'text/html');
 
 	let link = 'https://polar-eyrie-90298.herokuapp.com/https://letterboxd.com/typical' + doc.querySelector('.headline-2 > a').href.split('typical')[1];
-	console.log(link);
 
     fetch(link).then(function (response) {
         // The API call was successful!
