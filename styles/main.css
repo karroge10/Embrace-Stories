@@ -393,9 +393,9 @@ hr{
 	height: 120px;
 }
 .screenplay:nth-child(7) > .italic, .screenplay:nth-child(8) > .italic{
-	height: 90px;
+	height: 120px;
 }
-.screenplay:nth-child(8) > .italic, .screenplay:nth-child(9) > .italic{
+.screenplay:nth-child(9) > .italic, .screenplay:nth-child(10) > .italic{
 	height: auto;
 }
 
@@ -922,7 +922,7 @@ footer{
 	}
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1117px) {
 	.screenplays .section-hr {
 		margin-bottom: 100px;
 	}
