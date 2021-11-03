@@ -446,17 +446,6 @@ hr{
 	margin-bottom: 0px;
 }
 
-
-.podcasts{
-	width: 80%;
-	height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-
 .members{
 	width: 75%;
     display: flex;
@@ -504,12 +493,22 @@ hr{
 .member-description .description{
 	margin: 0.5em 0;
 }
+.team-member:nth-child(1) .member-description > i, .team-member:nth-child(2) .member-description > i{
+	height: 150px;
+}
+.team-member:nth-child(3) .member-description > i, .team-member:nth-child(4) .member-description > i{
+	height: 200px;
+}
+.team-member:nth-child(5) .member-description > i, .team-member:nth-child(6) .member-description > i{
+	height: 150px;
+}
 .member-description a h2 {
 	margin-bottom: 0.5em;
 	text-align: center;
 }
 .member-description .film-buttons{
 	justify-content: center;
+	justify-self: flex-end;
 }
 
 /* ------------------- Email Section ----------------- */
@@ -870,9 +869,21 @@ footer{
 	.footer-button .fa-circle:nth-child(1) {
 		margin-left: 0px;
 	}
+	.team-member:nth-child(1) .member-description > i, .team-member:nth-child(2) .member-description > i{
+		height: 170px;
+	}
+	.team-member:nth-child(3) .member-description > i, .team-member:nth-child(4) .member-description > i{
+		height: 220px;
+	}
 }
 
-@media screen and (max-width: 1095px) {
+@media screen and (max-width: 1200px) {
+	.team-member:nth-child(5) .member-description > p, .team-member:nth-child(6) .member-description > p{
+		height: 60px;
+	}
+}
+
+@media screen and (max-width: 1110px) {
 	.screenplays .section-hr {
 		margin-bottom: 100px;
 	}
@@ -950,7 +961,13 @@ footer{
 		margin-bottom: 70px;
 	}
 	.member-description{
-		width: 70%;
+		width: 75%;
+	}
+	.member-description > i{
+		height: auto !important;
+	}
+	.member-description p{
+		height: auto !important;
 	}
 	.nav-title{
 		margin-right: 10px;
