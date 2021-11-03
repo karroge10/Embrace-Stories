@@ -93,6 +93,7 @@ nav{
 }
 .menu-item:hover{
 	border: 1px solid #ad2224;
+	box-shadow: 0px 0px 10px 2px rgba(173, 34, 36, 0.2);
 }
 .sub-item:hover > .sub-link{
 	color: #ad2224;
@@ -198,10 +199,12 @@ hr{
     cursor: pointer;
     transition: all 200ms ease-in-out;
 	letter-spacing: 2px;
+	
 }
 .learn-more-button:hover{
 	color: #ad2224;
 	border: 1px solid #ad2224;
+	box-shadow: 0px 0px 15px 2px rgba(173, 34, 36, 0.20);
 }
 
 .hero-menu{
@@ -258,6 +261,11 @@ hr{
 .poster{
 	height: 100%;
 	width: 100%;
+	transition: all 200ms ease-in-out;
+	box-shadow: 0px 0px 20px 2px rgba(173, 34, 36, 0.25);
+}
+.poster:hover{
+	box-shadow: 0px 0px 25px 5px rgba(173, 34, 36, 0.4);
 }
 .film-info{
 	width: 35%;
@@ -332,24 +340,17 @@ hr{
 .film-button:hover{
 	color: #ad2224;
 	border: 1px solid #ad2224;
-
+	box-shadow: 0px 0px 15px 2px rgba(173, 34, 36, 0.2);
 }
 
-.fa-youtube, .fa-file-pdf{
-	margin-left: 5px;
-}
-.left-circle{
+
+.left-circle, .fa-twitter, .fa-envelope, .fa-code, .fa-youtube, .fa-file-pdf{
 	margin-left: 5px;
 }
 .fa-circle{
 	margin-right: -4px;
 }
-.fa-twitter{
-	margin-left: 5px;
-}
-.fa-envelope{
-	margin-left: 5px;
-}
+
 
 
 .screenplays{
@@ -379,6 +380,25 @@ hr{
 .screenplay .title{
 	height: 65px;
 }
+.italic{
+	font-style: italic;
+}
+.screenplay:nth-child(1) > .italic, .screenplay:nth-child(2) > .italic{
+	height: 160px;
+}
+.screenplay:nth-child(3) > .italic, .screenplay:nth-child(4) > .italic{
+	height: 100px;
+}
+.screenplay:nth-child(5) > .italic, .screenplay:nth-child(6) > .italic{
+	height: 120px;
+}
+.screenplay:nth-child(7) > .italic, .screenplay:nth-child(8) > .italic{
+	height: 90px;
+}
+.screenplay:nth-child(8) > .italic, .screenplay:nth-child(9) > .italic{
+	height: auto;
+}
+
 .disabled{
 	border: 1px solid #837d7d;
 	color: #837d7d;
@@ -386,7 +406,8 @@ hr{
 .disabled:hover{
 	border: 1px solid #837d7d;
 	color: #837d7d;
-	cursor: not-allowed
+	cursor: not-allowed;
+	box-shadow: none;
 }
 
 .menu-item-gap{
@@ -409,6 +430,11 @@ hr{
 .review-poster{
 	width: 100%;
 	height: auto;
+	box-shadow: 0px 0px 20px 3px rgba(173, 34, 36, 0.25);
+	transition: all 200ms ease-in-out;
+}
+.review-poster:hover{
+	box-shadow: 0px 0px 20px 5px rgba(173, 34, 36, 0.3);
 }
 .review-info{
 	margin-left: 25px;
@@ -475,12 +501,14 @@ hr{
 .team-member .image-container{
 	width: fit-content;
     margin-bottom: 25px;
+	border-radius: 50%;
 }
 .member-image{
     height: 200px;
     width: 200px;
 	object-fit: cover;
 	border-radius: 50%;
+	box-shadow: 0px 0px 20px 3px rgba(173, 34, 36, 0.25);
 }
 .member-description{
 	display: flex;
@@ -500,7 +528,7 @@ hr{
 	height: 200px;
 }
 .team-member:nth-child(5) .member-description > i, .team-member:nth-child(6) .member-description > i{
-	height: 150px;
+	height: 110px;
 }
 .member-description a h2 {
 	margin-bottom: 0.5em;
@@ -583,9 +611,11 @@ input::placeholder, .email-text::placeholder{
 	letter-spacing: 1px;
 	transition: all 200ms ease-in-out;
 	font-family: 'Epilogue', sans-serif;
+	
 }
 .email-button:hover {
 	background-color: #cc2e31;
+	box-shadow: 0px 0px 20px 2px rgba(173, 34, 36, 0.2);
 }
 
 .media-links-container{
@@ -616,6 +646,7 @@ input::placeholder, .email-text::placeholder{
 .social-button:hover{
 	color: #ad2224;
 	border: 1px solid #ad2224;
+	box-shadow: 0px 0px 20px 2px rgba(173, 34, 36, 0.2);
 }
 
 footer{
@@ -684,6 +715,7 @@ footer{
 .footer-button:hover{
 	color: #ad2224;
 	border-color: #ad2224;
+	box-shadow: 0px 0px 10px 2px rgba(173, 34, 36, 0.2);
 }
 
 /*-----------------------------------Hamburger button style-----------------------------------*/
@@ -875,6 +907,9 @@ footer{
 	.team-member:nth-child(3) .member-description > i, .team-member:nth-child(4) .member-description > i{
 		height: 220px;
 	}
+	.team-member:nth-child(5) .member-description > i, .team-member:nth-child(6) .member-description > i{
+		height: 120px;
+	}
 }
 
 @media screen and (max-width: 1200px) {
@@ -909,6 +944,7 @@ footer{
 	.description{
 		font-size: 18px;
 	}
+	
 	.learn-more-button{
 		font-size: 13px;
 	}
@@ -939,6 +975,9 @@ footer{
 	.film-button{
 		padding: 15px;
 		font-size: 14px;
+	}
+	.screenplay > .italic{
+		height: auto !important;
 	}
 	.screenplay .title{
 		height: auto;
