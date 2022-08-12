@@ -67,10 +67,10 @@ openSubMenu = (link) => {
 }
 closeSubMenu = (link) => {
     if (window.innerWidth >= 1080){
-        if (link.id === 'nav-projects'){
+        if (link === 'nav-projects'){
             projectsMenu.classList.add('hide-sub')
             projectsMenu.classList.remove('active-sub')
-        } else if (link.id === 'nav-about'){
+        } else if (link === 'nav-about'){
             aboutMenu.classList.add("hide-sub")
             aboutMenu.classList.remove('active-sub')
         } else {
@@ -91,7 +91,7 @@ function scrollSmoothTo(elementId) {
     const y = element.getBoundingClientRect().top + window.pageYOffset - yOffset;
     window.scrollTo({top: y, behavior: 'smooth'});
     hamburgerClose()
-    closeSubMenu()
+    closeSubMenu(elementId)
   }
 
 
@@ -102,26 +102,31 @@ function scrollSmoothTo(elementId) {
 }).then(function (html) {
 
 	// Convert the HTML string into a document object
-	var parser = new DOMParser();
-	var doc = parser.parseFromString(html, 'text/html');
+	const parser = new DOMParser();
+	const doc = parser.parseFromString(html, 'text/html');
 
-	let link = 'https://polar-eyrie-90298.herokuapp.com/https://letterboxd.com/super' + doc.querySelector('.headline-2 > a').href.split('super')[1];
+	const link = 'https://polar-eyrie-90298.herokuapp.com/https://letterboxd.com/super' + doc.querySelector('.headline-2 > a').href.split('super')[1];
 
     fetch(link).then(function (response) {
         // The API call was successful!
         return response.text();
-    }).then(function (html) {
+    }).then(async function (html) {
     
         // Convert the HTML string into a document object
-        var parser = new DOMParser();
-        var doc = parser.parseFromString(html, 'text/html');
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
         
-        let latestReviewMovie = doc.querySelector('.film-title-wrapper > a').innerText
-        let latestReviewAuthor = doc.querySelector('.title-4 > a > span').innerText
-        let latestReview = doc.querySelector('.body-text > div > div').innerText
-        let latestReviewPoster = doc.querySelector('.film-poster > img').src
- 
-
+        const latestReviewMovie = doc.querySelector('.film-title-wrapper > a').innerText;
+        const latestReviewAuthor = doc.querySelector('.title-4 > a > span').innerText;
+        const latestReview = doc.querySelector('.body-text > div > div').innerText;
+        const latestReviewPoster = await getPoster1(latestReviewMovie);
+         
+        async function getPoster1(latestReviewMovie){
+            const response = await fetch("https://api.themoviedb.org/3/search/movie?api_key=5be75f9f183da240b34367329058206a&language=English&include_adult=false&query=" + latestReviewMovie); // завершается с заголовками ответа
+            const data = await response.json();
+            return 'https://image.tmdb.org/t/p/w200/' + data.results[0].poster_path
+        }
+        
         document.querySelector('.reviews-container').children[0].children[0].children[0].src = latestReviewPoster
         document.querySelector('.reviews-container').children[0].children[0].href = link.split('https://polar-eyrie-90298.herokuapp.com/')[1]
         document.querySelector('.reviews-container').children[0].children[1].children[0].children[0].innerText = latestReviewMovie
@@ -148,24 +153,30 @@ fetch('https://polar-eyrie-90298.herokuapp.com/https://letterboxd.com/typical/fi
 }).then(function (html) {
 
 	// Convert the HTML string into a document object
-	var parser = new DOMParser();
-	var doc = parser.parseFromString(html, 'text/html');
+	const parser = new DOMParser();
+	const doc = parser.parseFromString(html, 'text/html');
 
-	let link = 'https://polar-eyrie-90298.herokuapp.com/https://letterboxd.com/typical' + doc.querySelector('.headline-2 > a').href.split('typical')[1];
+	const link = 'https://polar-eyrie-90298.herokuapp.com/https://letterboxd.com/typical' + doc.querySelector('.headline-2 > a').href.split('typical')[1];
 
     fetch(link).then(function (response) {
         // The API call was successful!
         return response.text();
-    }).then(function (html) {
+    }).then(async function (html) {
     
         // Convert the HTML string into a document object
-        var parser = new DOMParser();
-        var doc = parser.parseFromString(html, 'text/html');
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
         
-        let latestReviewMovie = doc.querySelector('.film-title-wrapper > a').innerText
-        let latestReviewAuthor = doc.querySelector('.title-4 > a > span').innerText
-        let latestReview = doc.querySelector('.body-text > div > div').innerText
-        let latestReviewPoster = doc.querySelector('.film-poster > img').src
+        const latestReviewMovie = doc.querySelector('.film-title-wrapper > a').innerText
+        const latestReviewAuthor = doc.querySelector('.title-4 > a > span').innerText
+        const latestReview = doc.querySelector('.body-text > div > div').innerText
+        const latestReviewPoster = await getPoster2(latestReviewMovie);
+         
+        async function getPoster2(latestReviewMovie){
+            const response = await fetch("https://api.themoviedb.org/3/search/movie?api_key=5be75f9f183da240b34367329058206a&language=English&include_adult=false&query=" + latestReviewMovie); // завершается с заголовками ответа
+            const data = await response.json();
+            return 'https://image.tmdb.org/t/p/w200/' + data.results[0].poster_path
+        }
  
         document.querySelector('.reviews-container').children[1].children[0].children[0].src = latestReviewPoster
         document.querySelector('.reviews-container').children[1].children[0].href = link.split('https://polar-eyrie-90298.herokuapp.com/')[1]

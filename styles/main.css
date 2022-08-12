@@ -1016,6 +1016,9 @@ footer{
 	.nav-title{
 		margin-right: 10px;
 	}
+	.menu-item-gap{
+		margin-bottom: 150px !important;
+	}
 	/*Hambuger*/
 	nav {
 		z-index: 1000;
