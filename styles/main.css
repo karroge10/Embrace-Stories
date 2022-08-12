@@ -432,6 +432,7 @@ hr{
 	height: auto;
 	box-shadow: 0px 0px 20px 3px rgba(173, 34, 36, 0.25);
 	transition: all 200ms ease-in-out;
+	background-image: url("./images/placeholder-poster-sm.png");
 }
 .review-poster:hover{
 	box-shadow: 0px 0px 20px 5px rgba(173, 34, 36, 0.3);
